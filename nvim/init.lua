@@ -21,10 +21,10 @@ local cmp = require('cmp')
 
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accep selected item with 'Enter' key
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4), -- Go backward in documentation (ctrl + b)
+        ['<C-f>'] = cmp.mapping.scroll_docs(4), -- Go Forward in documentation (ctrl + f)
+        ['<C-Space>'] = cmp.mapping.complete(), -- Show suggestions menu if it's clossed in insert mode (ctrl + space)
+        ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Only accept word if I selected one option with 'Enter' key
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' }, -- Language Server suggestions
