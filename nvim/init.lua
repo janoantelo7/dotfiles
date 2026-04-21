@@ -9,7 +9,8 @@ vim.pack.add({
     {src = "https://github.com/hrsh7th/nvim-cmp" },
     {src = "https://github.com/hrsh7th/cmp-nvim-lsp" },
     {src = "https://github.com/hrsh7th/cmp-buffer" },
-    {src = "https://github.com/hrsh7th/cmp-path" }
+    {src = "https://github.com/hrsh7th/cmp-path" },
+    {src = "https://github.com/nvim-lualine/lualine.nvim" }
 
 })
 
@@ -59,6 +60,17 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     callback = function()
         vim.lsp.buf.format({ async = false })
     end,
+})
+
+
+-- ==========================================================================
+-- STATUS BAR CONFIG
+-- ========================================================================== 
+
+require('lualine').setup({
+    options = {
+	theme = 'auto'
+    }
 })
 
 -- ==========================================================================
