@@ -1,5 +1,7 @@
 # Jano's Dotfiles
 
+My personal configuration files.
+
 ## Prerequisites
 
 Ensure you have the following tools installed:
@@ -11,5 +13,4 @@ Ensure you have the following tools installed:
     uv tool install basedpyright
     uv tool install ruff
     ```
-
 
