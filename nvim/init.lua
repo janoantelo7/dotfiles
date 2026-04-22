@@ -3,7 +3,7 @@
 -- ========================================================================== 
 
 vim.pack.add({
-    {src = "https://github.com/folke/tokyonight.nvim", name = "tokyonight" },
+    {src = "https://github.com/rebelot/kanagawa.nvim", name = "kanagawa" },
     {src = "https://github.com/neovim/nvim-lspconfig" }, -- Language Server
     -- Completion engine and sources
     {src = "https://github.com/hrsh7th/nvim-cmp" },
@@ -82,4 +82,4 @@ vim.opt.relativenumber = true -- Show relative numbers for easier jumping
 vim.opt.shiftwidth = 4 -- Number of spaces for indentation
 
 -- Apply the color theme
-vim.cmd.colorscheme "tokyonight-storm"
+vim.cmd.colorscheme "kanagawa"
