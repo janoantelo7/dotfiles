@@ -3,7 +3,7 @@
 -- ========================================================================== 
 
 vim.pack.add({
-    {src = "https://github.com/rebelot/kanagawa.nvim", name = "kanagawa" },
+    {src = "https://github.com/mofiqul/dracula.nvim", name = "dracula" },
     {src = "https://github.com/neovim/nvim-lspconfig" }, -- Language Server
     -- Completion engine and sources
     {src = "https://github.com/hrsh7th/nvim-cmp" },
@@ -85,4 +85,4 @@ vim.opt.relativenumber = true -- Show relative numbers for easier jumping
 vim.opt.shiftwidth = 4 -- Number of spaces for indentation
 
 -- Apply the color theme
-vim.cmd.colorscheme "kanagawa"
+vim.cmd.colorscheme "dracula"

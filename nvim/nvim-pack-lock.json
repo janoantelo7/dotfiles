@@ -12,9 +12,9 @@
       "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
       "src": "https://github.com/hrsh7th/cmp-path"
     },
-    "kanagawa": {
-      "rev": "bb85e4bfc8d89b0e62c8fa53ccdd13d12e2f77b3",
-      "src": "https://github.com/rebelot/kanagawa.nvim"
+    "dracula": {
+      "rev": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee",
+      "src": "https://github.com/mofiqul/dracula.nvim"
     },
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
