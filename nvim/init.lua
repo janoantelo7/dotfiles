@@ -10,7 +10,13 @@ vim.pack.add({
     {src = "https://github.com/hrsh7th/cmp-nvim-lsp" },
     {src = "https://github.com/hrsh7th/cmp-buffer" },
     {src = "https://github.com/hrsh7th/cmp-path" },
-    {src = "https://github.com/nvim-lualine/lualine.nvim" }
+    {src = "https://github.com/nvim-lualine/lualine.nvim" },
+
+    -- file explorer
+    {src = "https://github.com/nvim-lua/plenary.nvim"},
+    {src = "https://github.com/MunifTanjim/nui.nvim"},
+    {src = "https://github.com/nvim-tree/nvim-web-devicons"},
+    {src = "https://github.com/nvim-neo-tree/neo-tree.nvim"}
 
 })
 
@@ -75,6 +81,31 @@ require('lualine').setup({
 	theme = 'auto'
     }
 })
+
+
+-- ==========================================================================
+-- FILE EXPLORER CONFIG
+-- ========================================================================== 
+
+require("neo-tree").setup({
+    window = {
+	position = "left",
+	width = 30,
+    },
+    filesystem = {
+	filtered_items = {
+	    visible = true, -- Show hidden files
+	},
+	follow_current_file = {
+	    enabled = true,  
+	},
+    }
+})
+
+-- Keyboard shortcuts
+vim.keymap.set('n', '<C-n>', "<Cmd>Neotree toggle<CR>", { desc = "Alternate side bar" })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move the focus to left (neo-tree)" })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move the focus to right (editor)" })
 
 -- ==========================================================================
 -- CONFIG
