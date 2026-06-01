@@ -16,7 +16,8 @@ vim.pack.add({
     {src = "https://github.com/nvim-lua/plenary.nvim"},
     {src = "https://github.com/MunifTanjim/nui.nvim"},
     {src = "https://github.com/nvim-tree/nvim-web-devicons"},
-    {src = "https://github.com/nvim-neo-tree/neo-tree.nvim"}
+    {src = "https://github.com/nvim-neo-tree/neo-tree.nvim"},
+    {src = "https://github.com/akinsho/bufferline.nvim"}
 
 })
 
@@ -106,6 +107,28 @@ require("neo-tree").setup({
 vim.keymap.set('n', '<C-n>', "<Cmd>Neotree toggle<CR>", { desc = "Alternate side bar" })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = "Move the focus to left (neo-tree)" })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = "Move the focus to right (editor)" })
+
+-- ==========================================================================
+-- BUFFERLINE CONFIG
+-- ========================================================================== 
+
+vim.opt.termguicolors = true
+require("bufferline").setup({
+    options = {
+        offsets = {
+            {
+                filetype = "neo-tree",
+                text = "File Explorer",
+                text_align = "center",
+                separator = true,
+            }
+        }
+    }
+})
+
+-- Bufferline keyboard shortcuts
+vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', { desc = "Next buffer" })
+vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', { desc = "Previous buffer" })
 
 -- ==========================================================================
 -- CONFIG
