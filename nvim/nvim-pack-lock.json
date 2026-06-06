@@ -25,7 +25,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "neo-tree.nvim": {
-      "rev": "655b22b8515f3c4337bcdabe1b5c3f13a7744737",
+      "rev": "a3adf0a84554c9c4947991081fedc9750eac0652",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
     "nui.nvim": {
