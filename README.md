@@ -8,9 +8,11 @@ These dotfiles are tailored for modern development workflows, utilizing state-of
 
 ## Repository Structure
 
-- `nvim/`: Neovim configuration files.
-  - `init.lua`: The central configuration hub containing settings, package declarations, LSP setups, keybindings, and UI configurations.
-  - `nvim-pack-lock.json`: Lockfile for Neovim's native package manager (`vim.pack`), ensuring reproducible plugin installations across systems.
+- `setup.sh`: Installation script to automatically set up configurations and back up conflicting files.
+- `.config/`:
+  - `nvim/`: Neovim configuration files.
+    - `init.lua`: The central configuration hub containing settings, package declarations, LSP setups, keybindings, and UI configurations.
+    - `nvim-pack-lock.json`: Lockfile for Neovim's native package manager (`vim.pack`), ensuring reproducible plugin installations across systems.
 
 ---
 
@@ -28,12 +30,14 @@ Ensure the following tools are installed on your system:
 
 ### Installation
 
-To deploy the Neovim configuration, clone or symlink the `nvim` directory into your standard Neovim configuration path:
+To deploy the configurations, run the setup script from the root of this repository:
 
 ```bash
-mkdir -p ~/.config
-ln -s "$(pwd)/nvim" ~/.config/nvim
+chmod +x setup.sh
+./setup.sh
 ```
+
+This script will automatically create the necessary directories (e.g., `~/.config`), back up any conflicting existing configurations, and create symlinks to the repository files.
 
 Upon launching Neovim, the built-in package manager will resolve and install the plugins locked in `nvim-pack-lock.json`.
 
